@@ -1,0 +1,31 @@
+name: x86-windows
+
+on:
+  push:
+    branches: [ "master", "dev" ]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: x64
+
+    - name: Configure CMake
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -G Ninja
+
+    - name: Build
+      run: ninja -C ${{github.workspace}}/build test_runners
+
+    - name: Run convolutional test 
+      run: ${{github.workspace}}/build/tests/convolutional_test_runner
+
+    - name: Run reed solomon test 
+      run: ${{github.workspace}}/build/tests/reed_solomon_test_runner
