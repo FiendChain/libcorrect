@@ -1,7 +1,7 @@
 [libcorrect](https://github.com/quiet/libcorrect)
 ===========
-[![x86-windows](https://github.com/FiendChain/libcorrect/actions/workflows/x86-windows.yml/badge.svg)](https://github.com/FiendChain/libcorrect/actions/workflows/x86-windows.yml)
-[![x86-ubuntu](https://github.com/FiendChain/libcorrect/actions/workflows/x86-ubuntu.yml/badge.svg)](https://github.com/FiendChain/libcorrect/actions/workflows/x86-ubuntu.yml)
+[![x86-windows](https://github.com/williamyang98/libcorrect/actions/workflows/x86-windows.yml/badge.svg)](https://github.com/williamyang98/libcorrect/actions/workflows/x86-windows.yml)
+[![x86-ubuntu](https://github.com/williamyang98/libcorrect/actions/workflows/x86-ubuntu.yml/badge.svg)](https://github.com/williamyang98/libcorrect/actions/workflows/x86-ubuntu.yml)
 
 libcorrect is a library for Forward Error Correction. By using libcorrect, you can encode extra redundancy into a packet of data and then send it across a lossy channel. When the packet is received, it can be decoded to recover the original, pre-encoded data.
 
